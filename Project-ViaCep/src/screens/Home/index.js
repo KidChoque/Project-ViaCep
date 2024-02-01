@@ -1,4 +1,6 @@
 import { useEffect } from "react"
+import {ScrollForm,ContainerForm} from './style'
+import {InputBox} from '../../components/InputBox'
 
 export function Home(){
 
@@ -18,7 +20,7 @@ export function Home(){
 
         <ScrollForm>
             <ContainerForm>
-                <InputBox/>
+                <InputBox textLabel="Informe seu cep"/>
             </ContainerForm>
         </ScrollForm>
     )
