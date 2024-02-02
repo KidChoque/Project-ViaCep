@@ -2,7 +2,8 @@
 import { Input } from "../Input"
 import { Label } from "../Label/Index"
 
-import { FieldContent } from "./style"
+
+import { FieldContent, FieldEstado, FieldUF } from "./style"
 
 // //Definir props- AMANHÃ
 
@@ -20,9 +21,9 @@ export const InputBox = ({
     textLabel,
     placeholder,
     fieldValue = null,
-    onchangeText,
+    onChangeText,
     KeyType = 'default',
-    maxLenght,
+    maxLenght
 }) => {
     return(
 
@@ -38,10 +39,75 @@ export const InputBox = ({
           KeyType={KeyType}
           maxLenght={maxLenght}
           fieldValue={fieldValue}
-          onchangeText={onchangeText}
+          onChangeText={onChangeText}
           />
 
      </FieldContent>
 
     )
+}
+
+export const UFInput = ({  
+    fieldWidth,
+    editable= false,
+    textLabel,
+    placeholder,
+    fieldValue = null,
+    onChangeText,   
+    KeyType = 'default',
+    maxLenght}) =>{
+
+    return(
+
+        <FieldUF fieldWidth={fieldWidth}>
+   
+             {/* {label} */}
+            <Label textLabel={textLabel}/>
+             {/* {input} */}
+             <Input
+             
+             placeholder={placeholder}
+             editable={editable}
+             KeyType={KeyType}
+             maxLenght={maxLenght}
+             fieldValue={fieldValue}
+             onChangeText={onChangeText}
+             />
+   
+        </FieldUF>
+   
+       )
+  
+}
+export const EstadoInput = ({  
+    fieldWidth,
+    editable= false,
+    textLabel,
+    placeholder,
+    fieldValue = null,
+    onChangeText,   
+    KeyType = 'default',
+    maxLenght}) =>{
+
+    return(
+
+        <FieldEstado fieldWidth={fieldWidth}>
+   
+             {/* {label} */}
+            <Label textLabel={textLabel}/>
+             {/* {input} */}
+             <Input
+             
+             placeholder={placeholder}
+             editable={editable}
+             KeyType={KeyType}
+             maxLenght={maxLenght}
+             fieldValue={fieldValue}
+             onChangeText={onChangeText}
+             />
+   
+        </FieldEstado>
+   
+       )
+  
 }

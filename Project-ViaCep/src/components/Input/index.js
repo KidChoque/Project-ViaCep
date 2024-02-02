@@ -4,8 +4,8 @@ export function Input ({
     placeholder,
     editable,
     fieldValue,
-    onchangeText,
-    KeyType,
+    onChangeText,
+    keyType,
     maxLenght}){
     return(
 
@@ -15,7 +15,7 @@ export function Input ({
           keyboardType={keyType}
           maxLenght={maxLenght}
           value={fieldValue}
-          onchangeText={onchangeText}
+          onChangeText={onChangeText}
         />
 
     )

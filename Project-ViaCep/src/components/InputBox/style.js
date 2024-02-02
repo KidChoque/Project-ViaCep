@@ -7,3 +7,10 @@ export const FieldContent = styled.View`
  width: ${props => `${props.fieldWidth}%`};
 
 `
+
+export const FieldUF = styled(FieldContent)`
+width: 20%;
+`
+export const FieldEstado = styled(FieldContent)`
+width: 70%;
+`
